@@ -112,9 +112,9 @@ export const updateProfile = async (req, res) => {
         profilePic: uploadResponse.secure_url,
       },
       { new: true }
-    );
+    ).select("-password");
 
-    res.status(200).json({ updateUser });
+    res.status(200).json(updateUser);
   } catch (error) {
     console.error("Error in update profile controller", error.messsage);
     res.status(500).json({ message: "Internal server error" });

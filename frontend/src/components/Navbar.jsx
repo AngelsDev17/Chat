@@ -39,7 +39,7 @@ export const Navbar = () => {
                   <span className="hidden sm:inline">Profile</span>
                 </Link>
 
-                <button className="btn btn-sm flex gap-2 items-center cursor-pointer px-2" onClick={logout}>
+                <button className="btn btn-sm flex gap-2 items-center cursor-pointer px-2.5 text-xs!" onClick={logout}>
                   <LogOut className="size-5" />
                   <span className="hidden sm:inline">Logout</span>
                 </button>

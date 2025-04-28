@@ -62,15 +62,16 @@ export const MessageInput = () => {
         <div className="mb-3 flex items-center gap-2">
           <div className="relative">
             <img
-              src="imagePreview"
+              src={imagePreview}
               alt="Preview"
-              className="w-20 h-20 object-cover rounded-lg border border-base-content-700"
+              className="w-20 h-20 object-cover rounded-lg border border-zinc-700"
             />
 
             <button
-              type="button"
               onClick={removeImage}
-              className="absolute -top-1.5 -right-1.5 w-5 h-5 rouded-full bg-base-300 flex items-center justify-center"
+              className="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-base-300
+                flex items-center justify-center"
+              type="button"
             >
               <X className="size-3" />
             </button>
@@ -99,7 +100,7 @@ export const MessageInput = () => {
           <button
             type="button"
             className={`hidden sm:flex btn btn-circle ${
-              imagePreview ? "text-emerald-500" : "text-base-content-400"
+              imagePreview ? "text-emerald-500" : "text-zinc-400"
             }`}
             onClick={() => fileInputRef.current?.click()}
           >
@@ -109,7 +110,7 @@ export const MessageInput = () => {
 
         <button
           type="submit"
-          className="btn btn-sm btn-circle"
+          className="btn btn-circle"
           disabled={!text.trim() && !imagePreview}
         >
           <Send size={22} />
